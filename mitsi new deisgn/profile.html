@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Profile Page</title>
+      <style>
+         * { 
+         margin: 0;
+         padding: 0;
+         }
+         body {
+         font-family: Arial, Helvetica, sans-serif;
+         background: url('img/backgroundss.png');
+         background-size: cover;
+         min-width: 100%;
+         width: 100%;
+         height: auto;		
+         margin: 0;
+         padding: 0;
+         overflow: hidden; 
+         }
+         footer{
+         background: url("img/footer.png");
+         position: absolute;
+         bottom: 0;
+         width: 100%;
+         top: 500px;
+         max-height: 200px;
+         background-repeat: no-repeat;
+         background-size: cover;
+         }
+         .footer p {
+         position: relative;
+         left: 40%;
+         top: 135px;
+         font-size: 9.5px;
+         color: white;
+         font-family: Sans-Serif;
+         width: 100%;
+         }
+         .text-profile h1{
+         color: #386919;
+         font-family: eczar;
+         position: relative;
+         font-size: 50px;
+         left: 11%;
+         top:25px;
+         }
+         .text-profile h2{
+         color: white;
+         font-family: eczar;
+         position: relative;
+         font-size: 20px;
+         left: 0%;
+         top: -155px;
+         background-color: #344d2b;
+         text-align: left;
+         padding: 20px;
+         width: 87%;	
+         border-radius: 25px;
+         }	
+	 table {
+         width: 100%;
+         text-align: left;
+         position: relative;
+         top:20px;
+         left:3%;
+         }	
+	 th {
+	height: 30px;
+}
+td {
+	height: 30px;
+}
+         th:nth-child(1) {
+         border: hidden;
+         position: relative;
+         letter-spacing: 0.1em;
+         padding-right: 20px;
+         }
+         th:nth-child(2) {
+         border: hidden;
+         position: relative;
+         letter-spacing: 0.1em;
+         padding-right: 20px;
+         width: 68%;
+         }
+         .box {
+         background-color: #fff;
+         box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+         padding: 40px;
+         position: relative;	
+         font-family: Arial, sans-serif;
+         color: #333;
+         opacity: 0.5;
+         height: 27em;
+         }
+         .box img {
+         max-width: 30%;
+         max-height: 30%;
+         display: block;
+         margin-left: auto;
+         margin-right: auto;
+         position: relative;
+         align-items: center;
+         padding: 20px;
+         border: 2px solid #333;
+         box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+         }
+         .box h2 {
+         font-size: 36px;
+         text-align: center;
+         margin: 0;
+         padding: 0;
+         line-height: 1.2;
+         font-weight: 300;
+         letter-spacing: -1px;
+         color: #f00;
+         }
+         .box h3 {
+         text-align: center;
+         }
+         .box ul {
+         list-style: none;
+         padding: 0;
+         margin-top: 20px;
+         }
+         .box li {
+         font-size: 18px;
+         color: #555;
+         line-height: 1.5;
+         margin: 0;
+         padding: 0;
+         font-weight: bold;
+         }
+         .basic-info {
+         background-color: #f0f0f0;
+         }
+         .other-info {
+         background-color: white;
+         }
+         .tabs {
+         position: relative;
+         margin: 3rem 0;
+         height: 14.rem;
+         top: -155px;
+         }
+         .tabs::before,
+         .tabs::after {
+         content: "";
+         display: table;
+         }
+         .tabs::after {
+         clear: both;
+         }
+         .tab {
+         float: left;
+         }
+         .tab-switch {
+         display: none;
+         }
+         .tab-label {
+         position: relative;
+         display: block;
+         line-height: 2.75em;
+         height: 3em;
+         padding: 0 1.618em;
+         background: #d0d0d0;
+         border-right: 0.125rem solid #16a085;
+         color: #fff;
+         cursor: pointer;
+         top: 0;
+         transition: all 0.25s;
+         }
+         .tab-label:hover {
+         top: -0.25rem;
+         transition: top 0.25s;
+         }
+         .tab-content {
+         height: 19.50em;	
+         width: 85%;
+         position: absolute;
+         z-index: 1;
+         top: 2.75em;
+         left: 0;
+         padding: 1.618rem;
+         background: #fff;
+         color: #2c3e50;
+         opacity: 0;
+         transition: all 0.35s;
+         }
+         .tab-switch:checked + .tab-label {
+         background: #fff;
+         color: #2c3e50;
+         border-bottom: 0;
+         border-right: 0.125rem solid #fff;
+         transition: all 0.35s;
+         z-index: 1;
+         top: -0.325rem;
+         }
+         .tab-switch:checked + label + .tab-content {
+         z-index: 2;
+         opacity: 1;
+         transition: all 0.35s;
+         }
+         @media screen and (max-width: 450px) {
+         footer{
+         background: url("img/footer.png");
+         position: absolute;
+         width: 100%;
+         top: 700px;
+         max-height: 200px;	
+         background-repeat: no-repeat;
+         background-size: cover;
+         }
+         footer p {
+         position: absolute;
+         left: 15%;
+         top: 100px;
+         font-size: 9.5px;
+         color: white;
+         font-family: Sans-Serif;
+         }
+         .box h2 {
+         font-size: 20px;
+         margin: 0;
+         padding: 0;
+         line-height: 1.2;
+         font-weight: 300;
+         letter-spacing: -1px;
+         color: #f00;
+         }
+         .box p {
+         font-size: 15px;
+         }
+         }
+      </style>
+   </head>
+   <footer>
+      <div class="footer">
+         <p>©2023 MITSI EMPLOYEES PROFILING. ALL RIGHTS RESERVED.</p>
+      </div>
+   </footer>
+   <body>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <div class="text-profile">
+         <h1> Profile </h1>
+      </div>
+	<table>
+	<tr>
+         <th>
+            <div class="box basic-info">
+               <img src="img/icon1.png" alt="Profile Picture">
+               <h2>John Doe</h2>
+               <h3>Software Engineer</h3>
+                  <table>
+                     <tr>
+                        <th>
+                           <p>Development</p>
+                        </th>
+                     <tr>
+                        <td>
+                           <p>Position</p>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <p>Work Status</p>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <p>Username</p>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <p>Password</p>
+                        </td>
+                     </tr>
+                  </table>
+         </th>
+         <th>
+            <div class="text-profile">
+               <h2>Employee name</h2>
+            </div>
+ <div class="tabs">
+                  <div class="tab">
+                     <input type="radio" name="css-tabs" id="tab-1" checked class="tab-switch">
+                     <label for="tab-1" class="tab-label">Basic Information</label>
+                     <div class="tab-content"> 
+		     <table>
+		    	<tr>
+			  <th>
+		           <p>name:</p>
+			  </th>
+			  <th>
+		           <p>first name</p>
+			  </th>
+                        <tr>
+                          <td>
+		           <p></p>
+			  </td>
+			  <td>
+		           <p>last name</p>
+			  </td>
+			</tr>
+			<tr>
+                          <td>
+		           <p></p>
+			  </td>
+			  <td>
+		           <p>middle name</p>
+			  </td>
+			</tr>
+			<tr>
+			  <td>
+		           <p>age:</p>
+			  </td>
+			</tr>
+			<tr>
+			  <td>
+		           <p>address:</p>
+			  </td>
+			</tr>
+			<tr>
+			  <td>
+		           <p>contact number:</p>
+			  </td>
+			</tr>
+			<tr>
+			  <td>
+		           <p>civil status:</p>
+			  </td>
+			</tr>
+		    </table>
+		   </div>
+                  </div>
+                  <div class="tab">
+                     <input type="radio" name="css-tabs" id="tab-2" class="tab-switch">
+                     <label for="tab-2" class="tab-label">Other Information</label>
+                     <div class="tab-content">My father now and then sending me small sums of money, I laid them out in learning navigation, and other parts of the mathematics, useful to those who intend to travel, as I always believed it would be, some time or other, my fortune to do. </div>
+                  </div>
+               </div>
+         </th>
+      </tr>
+   </body>
+</html>

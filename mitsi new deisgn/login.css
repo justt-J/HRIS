@@ -6,54 +6,54 @@
   font-family: 'Poppins', sans-serif;
 }
 body{
-  background: url('backgroundss.png');
+  background-color: #f5f5f5;
   display: flex;
+  min-height: 110vh;
   align-items: center;
   justify-content: center;
   background-size: cover;
-  min-width: 100%;
-  width: 100%;
-  height: auto;
-  background-repeat: no-repeat;
   overflow: hidden;
-
   }
-.logo{
 
-}
 footer{
-  background: url("footer.png");
+  background: url("img/footer.png");
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 10vh; 
+  top: 500px;
   background-repeat: no-repeat;
   background-size: cover;
 }
-
+footer a {
+	  position: absolute;
+	  left: 40%;
+	  top: 135px;
+   	  font-size: 9.5px;
+    	  color: white;
+    	  font-family: Sans-Serif;
+  	}
 .logo img {
-  width: 100%;
-  height: 100%;
+  width: 85%;
+  height: 85%;
   position: relative;
-  top: -100px;
-  left: 8%;
+  margin: 0;
+  top: -65px;
+  z-index: 0;
+  left: 14%;
 }
 
-.wrapper{
+.wrapper {
+  background-color: rgba(128, 128, 128, 0.2);
   position: absolute;
   align: center;
-  top: 230px;
+  top: 120px;
   max-width: 350px;
   width: 50%;
-  height: 100%;
+  height: 65%;
   padding: 34px;
   border-radius: 6px;
-}
-
-.wrapper img{
-  width: 8%;
-  height: 10%;
-  margin: 15px;
+  animation-name: pop-in;
+  animation-duration: 0.5s;	
 }
 
 .wrapper h2{
@@ -67,6 +67,8 @@ footer{
 
 .wrapper form{
   margin-top: 30px;
+  position: relative;
+  top: -140px;
 }
 .wrapper form .input-box{
   height: 35px;
@@ -102,7 +104,11 @@ form h3{
   font-weight: 500;
   margin-left: 10px;
 
-
+}
+form p {
+color: #707070;
+font-size: 10px;
+position: relative;
 }
 .input-box.button input{
   color: #fff;
@@ -118,14 +124,13 @@ form h3{
 }
 form .text h3{
  color: #333;
- width: 100%;
  text-align: center;
-
 
 }
 form .text h3 a{
   color: #4070f4;
   text-decoration: none;
+ 	
 }
 form .text h3 a:hover{
   text-decoration: underline;
@@ -185,6 +190,12 @@ form .text h3 a:hover{
   background-color: #444;
 }
 
+@keyframes pop-in {
+     0% { opacity: 0; transform: scale(0.1); }
+     100% { opacity: 1; transform: scale(1); }
+}
+
+
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
   transition: margin-left .5s; /* If you want a transition effect */
@@ -193,7 +204,84 @@ form .text h3 a:hover{
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
+@media screen and (max-width: 450px) {
   .sidebar {padding-top: 15px;}
   .sidebar a {font-size: 18px;}
+footer{
+  background: url("img/footer.png");
+  position: absolute;
+  width: 100%;
+  top: 700px;
+max-height: 200px;	
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+footer a {
+	  position: absolute;
+	  left: 17%;
+	  top: 135px;
+   	  font-size: 9.5px;
+    	  color: white;
+    	  font-family: Sans-Serif;
+  	}
+.logo img {
+  width: 85%;
+  height: 85%;
+  position: relative;
+  margin: 0;
+  top: -55px;
+  z-index: 0;
+  left: 14%;
+}
+.wrapper {
+  background-color: rgba(128, 128, 128, 0.2);
+  position: absolute;
+  align: center;
+  top: 200px;
+  max-width: 350px;
+  width: 60%;
+  max-height: 350px;
+  height: auto;
+  padding: 34px;
+  border-radius: 6px;
+  animation-name: pop-in;
+  animation-duration: 0.5s;	
+}
+
+form h3{
+  color: #707070;
+  font-size: 10px;
+  font-weight: 500;
+  margin-left: 10px;
+
+}
+
+.wrapper form{
+  margin-top: 50px;
+  position: relative;
+  top: -140px;
+}
+.wrapper form .input-box{
+  height: 35px;
+  margin: 18px 0;
+}
+
+form .input-box input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding: 0 15px;
+  font-size: 17px;
+  font-weight: 400;
+  color: #333;
+  border: 1.5px solid #C7BEBE;
+  border-bottom-width: 2.5px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+.input-box input:focus,
+.input-box input:valid{
+  border-color: #4070f4;
+
+}
 }
