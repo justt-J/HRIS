@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Attendance</title>
+      <style>
+         * { 
+         margin: 0;
+         padding: 0;
+         }
+         body {
+         font-family: Arial, Helvetica, sans-serif;
+         background: url('img/backgroundss.png');
+         margin: 0;
+         padding: 0;
+         overflow: hidden; 
+         min-height: 110vh;
+         }
+.log_out a {
+position: absolute;
+top: 40px;
+left: 90%;
+display: block;
+text-decoration: none;
+}
+.back a {
+position: absolute;
+top: 40px;
+left: 85%;
+text-decoration: none;
+}
+
+         footer{
+         background: url("img/footer.png");
+         position: absolute;
+         bottom: 0;
+         width: 100%;
+         top: 500px;
+         background-repeat: no-repeat;
+         background-size: cover;
+         }
+         .footer a {
+         position: relative;
+         left: 40%;
+         top: 135px;
+         font-size: 9.5px;
+         color: white;
+         font-family: Sans-Serif;
+         width: 100%;
+         }
+         .text-profile h1{
+         color: #386919;
+         font-family: eczar;
+         position: relative;
+         font-size: 50px;
+         left: 5%;
+         top:25px;
+	 max-width: 400px;
+         }
+         .text-profile h2{
+         color: white;
+         font-family: eczar;
+         position: relative;	
+         font-size: 16px;
+         left: 33%;
+         width: 40%;
+         top: -22px;
+         background-color: #344d2b;
+         text-align: left;
+         padding: 10px;
+         padding-left: 30px;
+         border-radius: 25px;
+         }
+	 .container2{
+         position: relative;
+         top: 30px;
+         left: 10%;
+         }
+	 .container2 h4 {
+	 font-size: 25px;
+	 position: relative;
+	 left: -7%;
+ 	 }
+         table td{
+	 width: 5%;
+	 font-size: 25px;
+	 text-align: left;
+	 
+	 }
+	 td:nth-child(2) {
+         position: relative;
+         letter-spacing: 0.1em;
+         padding-right: 20px;
+         width: 40%;
+         text-align: left;
+         }
+	 button {
+         background-color: #2e7d32;
+         border: none;
+         padding: 15px 32px;
+         text-align: center;
+         display: inline-block;
+         font-size: 16px;
+         font-weight: bold;		
+         border-radius: 25px;
+         z-index: 100;
+         margin-right: 60px;
+         margin-left: 60px;
+         text-decoration: none;
+         position: relative;
+         top: 180px;
+         left: 70%;
+         }
+         button:hover {
+         background: gray;
+         }
+         .container {
+	 position: relative;
+         top: -254px;
+         left: 9.8%;
+         }
+         
+         .box {
+         border: 3px solid;
+	 height: 100%;
+	 border-radius: 10px;
+         }
+         .box img {
+         max-width: 30%;
+         max-height: 30%;
+         padding: 20px;
+         border: 2px solid #333;
+         box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+         }
+         .box h2 {
+         font-size: 36px;
+         margin: 0;
+         padding: 0;
+         line-height: 1.2;
+         font-weight: 300;
+         letter-spacing: -1px;
+         color: #f00;
+         }
+         .box ul {
+         list-style: none;
+         padding: 0;
+         margin-top: 20px;
+         }
+         .box li {
+         font-size: 18px;
+         color: #555;
+         line-height: 1.5;
+         margin: 0;
+         padding: 0;
+         font-weight: bold;
+         }
+         .basic-info {
+         background-color: #f0f0f0;
+         }
+         .other-info {
+         background-color: white;
+         }
+         .tabs {
+         position: relative;
+         margin: 3rem 0;
+         height: 14.em;
+         top: -40px;
+         left: 5%;
+         width: 100%;
+         }
+         .tabs::before,
+         .tabs::after {
+         content: "";
+         display: table;
+         }
+         .tabs::after {
+         clear: both;
+         }
+         .tab {
+         float: left;
+         }
+         .tab-switch {
+         display: none;
+         }
+         .tab-label {
+         position: relative;
+         display: block;
+         line-height: 2.75em;
+         height: 3em;
+         padding: 0 1.618em;
+         background: #d0d0d0;
+         border-right: 0.125rem solid #16a085;
+         color: #fff;
+         cursor: pointer;
+         top: 0;
+         transition: all 0.25s;
+         width: 75%;	
+         border-top-left-radius: 5px;
+         border-top-right-radius: 5px;
+         text-align: center;
+         }
+         .tab-label:hover {
+         top: -0.25rem;
+         transition: top 0.25s;
+         }
+         .tab-content {
+         height: 23.50em;	
+         width: 85%;
+         position: absolute;
+         z-index: 1;
+         top: 2.75em;
+         left: 0;
+         padding: 1.618rem;
+         background: #fff;
+         color: #2c3e50;
+         opacity: 0;
+         transition: all 0.35s;
+         }
+         .tab-switch:checked + .tab-label {
+         background: #fff;
+         color: #2c3e50;
+         border-bottom: 0;
+         border-right: 0.125rem solid #fff;
+         transition: all 0.35s;
+         z-index: 1;
+         top: -0.25rem;
+         }
+         .tab-switch:checked + label + .tab-content {
+         z-index: 2;
+         opacity: 1;
+         transition: all 0.35s;
+         }
+	 textarea {
+	 position: relative;
+	 top: 30px;	
+	 padding: 15px;
+	 left: 3%;
+	 max-width: 91%;
+	 max-height: 200px;
+	
+	 }
+@media only screen and (max-width:2049px) and (min-width: 1500px) {
+
+	footer{
+  background: url("img/footer.png");
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  top: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+footer a {
+	  position: absolute;
+	  left: 40%;
+	  top: 200px;
+   	  font-size: 9px;
+    	  color: white;
+    	  font-family: Sans-Serif;
+  	}
+      }
+
+@media screen and (max-width: 450px) {
+
+footer{
+  background: url("img/footer.png");
+  position: absolute;
+  width: 100%;
+  top: 700px;
+max-height: 200px;	
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+footer a {
+	  position: absolute;
+	  left: 17%;
+	  top: 135px;
+   	  font-size: 9.5px;
+    	  color: white;
+    	  font-family: Sans-Serif;
+  	}
+
+textarea {
+	 position: relative;
+	 top: 30px;	
+	 padding: 15px;
+	 left: 3%;
+	 max-width: 85%;
+	 max-height: 200px;
+	
+	 }
+.tabs {
+         position: relative;
+         margin: 3rem 0;
+         height: 14.em;
+         top: -0px;
+         left: 5%;
+         width: 100%;
+         }
+         
+.text-profile h2{
+         color: white;
+         font-family: eczar;
+         position: relative;
+         font-size: 16px;
+         left: 12%;
+         width: 70%;
+         top: 40px;
+         background-color: #344d2b;
+         text-align: left;
+         padding: 10px;
+         padding-left: 30px;
+         border-radius: 25px;
+         }
+.text-profile h1{
+         color: #386919;
+         font-family: eczar;
+         position: relative;
+         font-size: 35px;
+         left: 15%;
+         top: 40px;
+	 max-width: 400px;
+         }
+.log_out a {
+position: absolute;
+top: 20px;
+left: 80%;
+display: block;
+text-decoration: none;
+font-size: 20px;
+}
+.back a {
+position: absolute;
+top: 20px;
+left: 15%;
+text-decoration: none;
+font-size: 20px;
+}
+/*container of submit button*/
+.container {
+	 position: relative;
+         top: -254px;
+         left: 9.8%;
+         }
+
+button {
+         background-color: #2e7d32;
+         border: none;
+         padding: 15px 32px;
+         text-align: center;
+         display: inline-block;
+         font-size: 16px;
+         font-weight: bold;		
+         border-radius: 25px;
+         z-index: 100;
+         margin-right: 60px;
+         margin-left: 60px;
+         text-decoration: none;
+         position: relative;
+         top: 180px;
+         left: 30%;
+         }
+         button:hover {
+         background: gray;
+         }
+         
+}
+      </style>
+<script>
+function myFunction() {
+  var x = document.getElementById("back");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+x.style.display = "block";
+}
+}
+function myFunction1() {
+  var x = document.getElementById("back");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  }  else {
+x.style.display = "none";
+}
+}
+</script>
+   </head>
+   <footer>
+      <div class="footer">
+         <a>©2023 MITSI EMPLOYEES PROFILING. ALL RIGHTS RESERVED.</a>
+      </div>
+   </footer>
+   <body>
+<div class="back" id="back">
+<a href="welcome_page.html">back</a>
+</div>
+<div class="log_out" id="signout">
+<a href="index.html">sign out</a>
+</div>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <div class="text-profile">
+         <h1>ATTENDANCE</h1>
+      </div><div class="text-profile">
+         <h2>Kaye Antonette M. Baculpo</h2>
+      </div>
+      <div class="tabs">
+      <div class="tab">
+         <input type="radio" name="css-tabs" id="tab-1" checked class="tab-switch">
+         <label for="tab-1" class="tab-label">SIGN IN</label>
+         <div class="tab-content">
+	<div class="box">
+	<div class="container2">
+	 	<table>
+		  <tr>
+                     <td>
+                        <p>Date: </p>
+                     </td>
+		     <td>
+			<p>6/17/2023</p>
+		     </td>
+		  </th>
+                  <tr>
+                     <td>
+                        <p>Time: </p>
+                     </td>
+	             <td>
+			<p>2:46 PM</p>
+		     </td>
+		  </th>
+                  <tr>
+                     <td>
+                        <p>Location: </p>
+                     </td>
+		     <td>
+			<p>sa puso mo</p>
+		     </td>
+		  </tr>
+	        </table>
+                        <button>
+                        <a style="color: white;">SIGN IN</a>
+                        </button>
+	</div>
+ </div>
+         </div>
+      </div>
+      <div class="tab" type="button">
+         <input type="radio" name="css-tabs" id="tab-2" class="tab-switch">
+         <label for="tab-2" class="tab-label">SIGN OUT</label>
+         <div class="tab-content">
+  	  <div class="box">
+	<div class="container2">
+	<h4>Daily Report</h4>
+	</div>
+<form method="get">
+  <label>
+<textarea name="message" rows="15" cols="145" placeholder="Enter report..."></textarea>
+  <br><br>
+  </label>	
+</form>	
+ </div><div class="container">
+<button style="background-color: red;">
+                        <a style="color: white;">SUBMIT</a>
+                        </button>
+	</div>
+         </div>
+      </div>
+      
+      </th>
+      </tr>
+      <tr>
+         <th>
+         </th>
+      </tr>
+   </body>
+</html>
