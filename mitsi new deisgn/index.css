@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+         *{
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         font-family: 'Poppins', sans-serif;
+         }
+         body{
+ 	 background-color: #f5f5f5;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         background-size: cover;
+         min-height: 110vh;
+         overflow: hidden;
+         }
+         .logo img {
+         width: 60%;
+         height: auto;
+         position: absolute;
+         margin: 0;
+         top: -190px;
+         z-index: 0;
+         left: 24%;
+         animation-name: pop-in;
+         animation-duration: 0.5s;
+         }
+.logo img: hover{
+animation-name: pop-inss;
+transition: top 0.25s;
+
+}
+         table, th, tr{
+         width: 100%;
+         text-align: center;
+         border: none;
+         position: absolute;
+         left: -1.5%;
+         top: 40px;
+         }
+         button {
+         background-color: #2e7d32;
+         border: none;
+         padding: 15px 32px;
+         text-align: center;
+         display: inline-block;
+         font-size: 16px;
+         font-weight: bold;		
+         border-radius: 25px;
+         z-index: 100;
+         margin-right: 60px;
+         margin-left: 60px;
+         text-decoration: none;
+         width: 12%;
+         }
+         button:hover {
+         background: gray;
+         }
+         table{
+         border: hidden;
+         position: relative;
+         top:20px;
+         left:3%;
+         }
+         footer{
+  background: url("img/footer.png");
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  top: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+footer a {
+	  position: absolute;
+	  left: 40%;
+	  top: 135px;
+   	  font-size: 9px;
+    	  color: white;
+    	  font-family: Sans-Serif;
+  	}
+         @keyframes pop-in {
+         0% { opacity: 0; transform: scale(0.1); }
+         100% { opacity: 1; transform: scale(1); }
+         }
+@keyframes pop-inss {
+         100% { opacity: 0; transform: scale(0.1); }
+         105% { opacity: 1; transform: scale(1); }
+         }
+@media only screen and (max-width:2049px) and (min-width: 1500px) {
+
+	footer{
+  background: url("img/footer.png");
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  top: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+footer a {
+	  position: absolute;
+	  left: 40%;
+	  top: 200px;
+   	  font-size: 9px;
+    	  color: white;
+    	  font-family: Sans-Serif;
+  	}
+      }
+
+         @media screen and (max-width: 450px) {
+              button {
+                     background-color: #2e7d32;
+                     border: none;
+                     padding: 15px 32px;
+                     text-align: center;
+                     display: inline-block;
+                     font-size: 16px;
+                     font-weight: bold;		
+                     border-radius: 25px;
+                     z-index: 100;
+                     margin-right: 60px;
+                     margin-left: 60px;
+                     text-decoration: none;
+                     width: 40%;
+                     }
+              .logo img {
+                     width: 70%;
+                     height: auto;
+                     position: absolute;
+                     margin: 0;
+                     top:100px;
+                     z-index: 0;
+                     left: 18%;
+                     animation-name: pop-in;
+                     animation-duration: 0.5s;
+                     }
+              footer{
+                     background: url("img/footer.png");
+                     position: absolute;
+                     width: 100%;
+                     top: 700px;
+                   max-height: 200px;	
+                     background-repeat: no-repeat;
+                     background-size: cover;
+                   }
+                   footer a {
+                       position: absolute;
+                       left: 17%;
+                       top: 135px;
+                          font-size: 9.5px;
+                           color: white;
+                           font-family: Sans-Serif;
+                       }
+         }
