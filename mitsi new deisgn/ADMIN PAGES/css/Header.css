@@ -1,0 +1,212 @@
+/*Header.css*/
+@import url("main.css");
+@import url("dropdown.css");
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;1,400;1,500&family=Trocchi&display=swap');
+@import url("Mobile.css");
+    
+html,
+html{
+    height: 100vh;
+   
+  
+}
+
+*h1{
+    all:unset;
+
+}
+a{
+    text-decoration: none;
+    
+    all:unset;
+}
+
+*{
+    font-family: "Arimo",sans-serif;
+    opacity: 100%;
+    font-size: 25px;
+    
+}
+
+body{
+    background-color: white;
+    display: grid;
+    grid-template-rows: 1fr;
+    background-size: cover;
+
+    height: 100%;
+    width: 100%;
+   
+    margin:0;
+    padding:0;
+    overflow-y: scroll;
+    background-repeat: no-repeat;
+   
+
+
+}
+header{
+    background-color: white;
+    opacity:95%;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+   
+    margin:0 50px;
+    
+    margin-top: 10px;
+    
+}
+header .Mitsi-Logo{
+    display: flex;
+    height: 120px;
+    margin-top: none;
+    
+    flex:2;
+}
+
+header .Mitsi-Logo img{
+    height: 200px;
+    width: 200px;
+    margin-left: 25px;
+    
+}
+header .menu-container{
+    display: flex;
+    height: 120px;
+    
+}
+header .menu-container .nav-container{
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+    padding:25px 50px;
+    
+
+
+    
+}
+header .menu-container .nav-container .Exit a{
+    font-family: "Arimo",sans-serif;
+    font-size:15px;
+    font-weight: 400;
+    color:black;
+    cursor: pointer;
+    padding:5px;
+    padding-left:10px;
+    border-radius:15px;
+    
+   
+   
+    
+
+   
+}
+header .menu-container .nav-container .Exit a:hover{
+    font-weight: bold;
+    color: blue;
+    text-decoration: underline;
+
+   
+}
+header .menu-container .nav-container .Exit img{
+    height: 25px;
+    width: 25px;
+    
+}
+
+.main  .content-container .content-searchbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    text-align: right;
+    align-items: right;
+    font-size: 13px;
+    
+  }
+  .main  .content-container .content-searchbar form{
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    text-align: right;
+    align-items: right;
+    
+  }
+  
+    .main  .content-container .content-searchbar{
+      
+     
+      
+      
+      margin: 15px 5px;
+      margin-right: 25px;
+      
+    }
+    .main .content-container .content-searchbar form {
+      background-color: white;
+      border-radius: 15px;
+      border: 1px solid;
+      padding:3px;
+  
+    display: flex;
+    flex-direction: row;
+    
+    
+     margin:0 10px;
+    }
+  
+    .main .content-container .content-searchbar form img {
+      height: 20px;
+      
+      
+      padding-left:5px;
+      margin:2px;
+      border-right:none ;
+      border-color: black;
+      border: 2px ;
+      justify-content: center;
+      align-items: center;
+      }
+    
+  
+  
+.main .content-container .content-searchbar form input{
+    margin:0 5px;
+    
+    border:none;
+  }
+  .main .content-container .content-searchbar form input {
+    
+    margin:0 5px;
+    font-size: 13px;
+  
+    
+  }
+  .main .content-container .content-searchbar form button{
+    border-color: transparent;
+    background-color: rgb(227, 227, 227);
+    box-shadow: 50%;
+    
+    border: transparent;
+    border:2px;
+    cursor: pointer;
+    padding: 0 5px;
+  
+    font-size: 13px;
+    border-radius: 10px;
+    margin:0 5px;
+    
+  }
+  .main .content-container .content-searchbar form button:hover{
+  color:white;
+  background-color: rgb(63, 62, 62);
+  transition: 400ms;
+  border-color: transparent;
+  }
+
+
+
+
+    

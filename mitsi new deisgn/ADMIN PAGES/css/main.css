@@ -1,0 +1,154 @@
+
+.main{
+    height: 100vh;
+    width: 100%;
+    background-color: transparent;
+    opacity: 95%;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+.main .content-container{
+    display: grid;
+    grid-template-rows: 80px 80px 60px;
+    
+    background-color: white;
+    margin-top:10px;
+    margin:0 50px;
+    
+   
+    margin-bottom:0;
+    height: 210px;
+   
+
+}
+.main .content-container .content-elements {
+    
+   
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    border-bottom:2px solid;
+    border-color:black;
+    margin:0 50px;
+   
+    
+ 
+}
+.main .content-container .content-elements h1{
+    font-family:"Trocchi",sans-serif ;
+    font-weight: 400;
+    padding-bottom: 25px;
+    font-size: 50px;
+}
+.main .content-container .content-elements h1{
+    margin-top:5px;
+}
+.main .content-container .content-controller{
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+    margin:5px 50px;
+    font-size: 5px;
+    text-align: left;
+    
+}
+.main .content-container .content-controller option{
+    font-size:10px;
+}
+.main .content-container select{
+    height: 30px;
+    width: 120px;
+    border: 1px solid;
+    border-color: black;
+    border-radius: 3px;
+    font-size:10px;
+    padding-left:3px;
+}
+
+.main .content-container .content-controller p{
+    font-size:15px;
+    margin:3px;
+
+}
+
+
+.main .table{
+    margin:5px 50px;
+    background-color: white;
+    height: 80vh;
+    
+    overflow: auto;
+    scrollbar-gutter:stable;
+    scroll-behavior: smooth;
+    border:none;
+   
+   
+
+
+}
+.main .table table{
+    
+
+    
+    border-collapse:collapse;
+    width: 100%;
+    
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    font-size: 13px;
+    border:none;
+    opacity: 80%;
+   
+    
+}
+.main .table th,tr,td{
+   
+    
+    border-color:black;
+    border-collapse: collapse ;
+    
+    
+}
+.main .table table tr .column1{
+    border-right:2px solid;
+    border-color:black;
+    font-size: 13px;
+    
+}
+
+.main .table th {
+    height: 30px;
+    position: sticky;
+    top:0;
+    background-color: lightgray;
+    font-weight: 100;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    
+    
+   
+    padding:0 10px;
+
+
+
+}
+.main .table .employee-name{
+    
+    border-right:2px solid;
+    border-color:black;
+   
+}
+.main .table tr, td{
+    height: 30px;
+    background-color: white;
+    font-size: auto;
+    padding:0 10px;
+    font:unset;
+    font-size:15px;
+    font-weight: 100;
+    border-bottom:2px solid black;
+}

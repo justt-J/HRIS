@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Account</title>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <link rel="stylesheet" href="css/Add_user.css">
+      <header>
+      </header>
+      <script>
+         function openNav() {
+           document.getElementById("mySidenav").style.display = "block";
+         }
+         
+         function closeNav() {
+           document.getElementById("mySidenav").style.display = "none";
+         }
+      </script>
+      <footer>	
+         <a>©2023 MITSI EMPLOYEES PROFILING. ALL RIGHTS RESERVED.</a>
+      </footer>
+   </head>
+   <body>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div class="back" id="back">
+<a href="Employees.html">back</a>
+</div>
+      <div id="mySidenav" class="sidenav">
+         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+         <a href="#">About</a>
+         <a href="#">Services</a>
+         <a href="#">Clients</a>
+         <a href="#">Contact</a>
+      </div>
+      <span style="font-size:30px;cursor:pointer; position: relative; top: -320px; right:36%; color: #386919" onclick="openNav()">&#9776; Account</span>
+      <div class="wrapper">
+         <div class="text-profile">
+            <h2>Add New User</h2>
+         </div>
+	 <h6>Create a brand new user and them to this website</h6>
+         <form action="#">
+            <div class="input-box">
+               <p>Username</p>
+               <input type="text" placeholder="Enter Username" required>
+            </div>
+            <div class="input-box">
+               <p>Email</p>
+               <input type="text" placeholder="Email" required>
+            </div>
+            <div class="input-box">
+               <p>Full name</p>
+               <input type="text" placeholder="Enter Full name" required>
+            </div>
+            <div class="input-box">
+               <p>Position</p>
+               <input type="text" placeholder="Enter position" required>
+            </div>
+	    <div class="input-box">
+               <p>Work Status</p>
+	<select name="languages" id="lang">
+        <option value="">Regular</option>
+        <option value="">Irregular</option>
+      </select>
+            </div>
+	    <div class="input-box">
+               <p>Department</p>
+               <input type="text" placeholder="Enter department" required>
+            </div>
+  	
+         </form>
+         <div class="container">
+	 <form action="#">
+
+  <div class="input-box">
+               <p>Contact number</p>
+               <input type="number" placeholder="Enter contact number" required>
+            </div>
+<div class="input-box">
+               <p>Sex</p>
+	<select name="languages" id="lang">
+        <option value="">Male</option>
+        <option value="">Female</option>
+      </select>
+            </div>
+            <div class="input-box">
+               <p>Password</p>
+               <input type="password" placeholder="Enter password" required>
+            </div>
+            <div class="input-box">
+               <p>Confirm Password</p>
+               <input type="password" placeholder="Confirm password" required>
+            </div>
+  <div class="input-box">
+               <p>User Profile</p>
+	<select name="languages" id="lang">
+        <option value="">Admin</option>
+        <option value="">Employee</option>
+      </select>
+            </div>
+            
+         </form>
+ </div>
+<div class="container_button">
+<button>
+                        <a style="color: white;">SUBMIT</a>
+                        </button>
+	</div>
+	</div>
+      </div>
+   </body>
+</html>
