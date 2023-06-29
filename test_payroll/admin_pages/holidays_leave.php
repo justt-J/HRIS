@@ -5,9 +5,10 @@ if (isset($_POST["submit"])) {
   $holidays = $_POST['holidays'];
   $leave = $_POST['leave'];
   $days_worked = $_POST['days_worked'];
+  $total_salary = $_POST['total_salary'];
   
 
-  $sql = "UPDATE `users` SET `holidays`='$holidays' , `leave`='$leave' , `days_worked`='$days_worked' WHERE id = $id";
+  $sql = "UPDATE `users` SET `holidays`='$holidays' , `leave`='$leave' , `days_worked`='$days_worked' , `total_salary`='$total_salary' WHERE id = $id";
   $mysqli = include "../connection/database.php";
   $result = $mysqli->query($sql);
 
@@ -27,7 +28,7 @@ if (isset($_POST["submit"])) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
     <title>Document</title>
 </head>
-<body  onload="getDays()">
+<body >
 
 <?php
 $mysqli = include "../connection/database.php";
@@ -66,6 +67,15 @@ $row = mysqli_fetch_assoc($result);
           <label class="form-label">Days Worked:</label>
           <input type="number" class="form-control" id = "days_worked" name="days_worked" value="<?php echo $row['days_worked'] ?>">
     </div>
+
+    
+    <input class="form-control" type="hidden" name="gross_pay" id="gross_pay"  value="<?php echo $row['gross_pay'] ?>">
+    
+    <input class="form-control" type="hidden" name="total_salary" id="total_salary"  value="<?php echo $row['total_salary'] ?>">
+    <input type="hidden" class="form-control" id = "phil_health" name="phil_health" value="<?php echo $row['phil_health'] ?>">
+    <input type="hidden" class="form-control" id = "sss" name="sss" value="<?php echo $row['sss'] ?>">
+    <input type="hidden" class="form-control" id = "pag_ibig" name="pag_ibig" value="<?php echo $row['pag_ibig'] ?>">
+    <input type="hidden" class="form-control" id = "health_insurance" name="health_insurance" value="<?php echo $row['health_insurance'] ?>">
     
 
      
@@ -77,6 +87,13 @@ $row = mysqli_fetch_assoc($result);
     <script type="text/javascript">
 
         function getDays(){
+            let phil_health = document.getElementById("phil_health");
+            let sss = document.getElementById("sss");
+            let pag_ibig = document.getElementById("pag_ibig");
+            let health_insurance = document.getElementById("health_insurance");
+            let gross_pay = document.getElementById("gross_pay");
+
+
             //leave
             let leave_input = document.getElementById("leave_input");
             let leave = document.getElementById("leave");
@@ -88,11 +105,21 @@ $row = mysqli_fetch_assoc($result);
            	let total_leave = leave_input.valueAsNumber + leave.valueAsNumber;
             
             let days = document.getElementById("days_worked");
-            let total_days = days.valueAsNumber + parseInt(holidays_input.value) + leave_input.valueAsNumber 
+            let total_days = days.valueAsNumber + parseInt(holidays_input.value) + leave_input.valueAsNumber;
             
+            // let hol_leave = (parseInt(holidays_input.value) + leave_input.valueAsNumber)
+            // let tsalary = document.getElementById("total_salary");
+            // let sal = tsalary.value * (parseInt(holidays_input.value) + leave_input.valueAsNumber);
+
+            let deduc = phil_health.valueAsNumber + sss.valueAsNumber + pag_ibig.valueAsNumber + health_insurance.valueAsNumber;
+            let salary = gross_pay.value * (days.valueAsNumber + parseInt(holidays_input.value) + leave_input.valueAsNumber);
+            let t_salary = salary - deduc;
+
+
             document.getElementById("leave").value = total_leave; 
             document.getElementById("holidays").value = total_holidays; 
             document.getElementById("days_worked").value = total_days; 
+            document.getElementById("total_salary").value = t_salary; 
             
         }
 
