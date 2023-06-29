@@ -1,0 +1,149 @@
+@import url("Home-Content.css");
+@import url("table.css");
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;1,400;1,500&family=Trocchi&display=swap');
+@import url("dropdow-menu.css");
+
+*{
+    font-family: "Trocchi",sans-serif;
+    opacity: 100%;
+}
+
+
+body{
+    margin:15px;
+    padding:0;
+    height: 100%;
+    overflow: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    
+    
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 80%;
+    transition: 350ms;
+    
+}
+
+
+    
+
+
+
+a{
+    text-decoration: none;
+
+}
+li{
+    list-style: none;
+    list-style-type: none;
+}
+:root{
+    --header-color:#7ba461;
+    --vo1-color:#899098;
+    --vo2-color:#43831C;
+    --header-text-color:#344D2B;
+    
+
+
+}
+
+p, h1{
+    padding:0;
+    margin:0;
+
+}
+header{
+
+    
+    
+    margin:25px;
+    margin-top:10px;
+    display: flex;
+    flex:1fr;
+    flex-direction: row;
+    height: 100px;
+    background:none;
+    font-size: 25px;
+    justify-content: center;
+    opacity: 100%;
+    width: 100%;
+    width: auto;
+   
+  
+    transition: 350ms;
+ 
+  
+   top:0;
+   z-index: 0;
+   gap:300px;
+   
+   
+ 
+
+    
+
+}
+
+
+header .HR-Information{
+    display:flex;
+    
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    align-items:center;
+   flex:1;
+    color:var(--header-text-color);
+    overflow: hidden;
+    
+
+}
+
+header .HR-Information img{
+ 
+    height: 200px;
+    width: 200px;
+    margin:5px;
+    
+   
+
+
+}
+header .menu-container{
+    
+    align-items: right;
+    justify-content: right;
+    text-align: right;
+    flex:3;
+    margin-top:10px;
+}
+header .menu-container a{
+    
+    color:black;
+    font-family: "Arimo",sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    padding: 20px ;
+    border-radius: 15px;
+    
+   
+    margin-top:20px;
+    
+    margin:5px 15px;
+    justify-content: center;
+
+}
+header .menu-container a:hover{
+    color: blue;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+
+
+

@@ -1,0 +1,180 @@
+.main{
+  height: 100vh;
+  margin:0 25px;
+  display: grid;
+  grid-template-columns: 400px, 60vh;
+  grid-auto-rows: 1fr;
+  background-color: transparent;
+  box-shadow: inset;
+
+
+
+}
+
+.main .home-section{
+  margin:0 15px;
+  height:100vh;
+  background-color:transparent;
+  
+
+}
+.main .home-section .list-header{
+  
+  margin:25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 10vh;
+  display: flex;
+  border-bottom: 5px solid;
+
+  flex-direction: row;
+  font-size: 15px;
+}
+.main .home-section .list-header button {
+  display: flex;
+  flex-direction: row;
+ 
+  transition: 300ms ease-in;
+  padding:10px;
+ font-size: 13px;
+  border-radius: 15px;
+  
+  margin:25px;
+  box-shadow: 1px 1px;
+  cursor: pointer;
+}
+
+.main .home-section .list-header button:hover{
+  background-color: rgb(104, 104, 104);
+
+}
+
+
+.main .home-section .list-header button p{
+ 
+  color:black;
+  font-size: 13px;
+  padding:3px;
+  margin:3px;
+  border:none;
+
+
+ 
+}
+.main .home-section .list-controller{
+  margin-bottom: 25px;
+  font-size: 25px;
+  
+}
+
+.main .home-section .list-controller .show-entries{
+
+font-size: 13px;
+display: flex;
+flex-direction: row;
+flex:5;
+justify-content: center;
+text-align: left;
+align-items: left;
+
+  
+
+}
+.main .home-section .list-controller .show-entries select{
+
+  
+    margin:0 10px;
+  
+  }
+.main .home-section .list-controller .search-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  text-align: right;
+  align-items: right;
+  font-size: 13px;
+}
+.main .home-section .list-controller .search-bar form{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  text-align: right;
+  align-items: right;
+  
+}
+
+  .main .home-section .list-controller .search-bar{
+    
+   
+    
+    
+    margin: 5px 5px;
+    margin-right: 25px;
+    
+  }
+  .main .home-section .list-controller .search-bar form {
+    background-color: white;
+    border-radius: 15px;
+    border: 1px solid;
+    padding:3px;
+
+  display: flex;
+  flex-direction: row;
+  
+  
+   margin:0 10px;
+  }
+
+  .main .home-section .list-controller .search-bar  form img {
+    height: 20px;
+    
+    
+    padding-left:5px;
+    margin:2px;
+    border-right:none ;
+    border-color: black;
+    border: 2px ;
+    justify-content: center;
+    align-items: center;
+    }
+  
+
+
+.main .home-section .list-controller .search-bar form input{
+  margin:0 5px;
+  
+  border:none;
+}
+main .home-section .list-controller .search-bar form input {
+  
+  margin:0 5px;
+  font-size: 14px;
+
+  border-color: black;
+  border: 2px solid;
+}
+.main .home-section .list-controller .search-bar form button{
+  border-color: transparent;
+  background-color: rgb(227, 227, 227);
+  box-shadow: 50%;
+  
+  border: transparent;
+  border:2px;
+  cursor: pointer;
+  padding: 0 5px;
+
+  font-size: 14px;
+  border-radius: 10px;
+  margin:0 5px;
+  
+}
+.main .home-section .list-controller .search-bar form button:hover{
+color:white;
+background-color: rgb(63, 62, 62);
+transition: 400ms;
+border-color: transparent;
+}
