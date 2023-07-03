@@ -1,0 +1,99 @@
+/* Variriables */
+:root{
+	--mainColor: #494949;
+	--secondayColor:  darkgray;
+	--white: #FFFFFF;
+}
+/* Import Font */
+@font-face{
+	font-family: DM Sans;
+	src: url(https://fonts.gstatic.com/s/dmsans/v11/rP2Hp2ywxg089UriCZ2IHSeH.woff2) format('woff2');
+}
+/* Global Settings */
+*{
+	padding: 0;
+	margin: 0;
+	font-family: 'DM Sans', sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	box-sizing: border-box;
+}
+body{
+	width: 100%;
+	background-color: #eee;
+}
+hr{
+	border: 1px solid rgba(236, 240, 241,0.3);
+}
+.container{
+	width: 960px;
+	margin: 0 auto;
+}
+/* Content Styling */
+main{
+	height: auto;
+	background-color: var(--white);
+	padding: 30px;
+	box-shadow: 0 0 2px #808080;
+	position: relative;
+	z-index: 100;
+}
+main h2{
+	font-size: 40px;
+	text-align: left;
+	margin-bottom: 10px;
+}
+/* Content Section === Checkout Page */
+main .application-form{
+	max-width: 600px;
+	padding: 10px;
+	margin: 0 auto;
+}
+/* Content main === Checkout Page === Checkout Items */
+main .application-form .application-form-detail{
+	width: 100%;
+}
+main .application-form .application-form-detail h4{
+	display: block;
+	color: var(--secondayColor);
+	background-color: var(--mainColor);
+	text-transform: uppercase;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+form .form-group{
+	margin: 10px 5px;
+	width: calc(100% - 10px);
+}
+form .form-group input,
+form .form-group select,
+form .form-group textarea{
+	width: 100%;
+	padding: 8px 5px;
+	border: 1px solid var(--secondayColor);
+	outline: none;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  border: none; 
+}
+.hero .btn1 {
+	text-decoration: none;
+	text-align: center;
+	color: red;
+	font-size: 14px;
+	font-family: Roboto;
+	border: 1.5px solid whitesmoke;
+	background-color: #f8f8f8;
+	position: relative;
+	line-height: 40px;
+	float: right;
+	right: 210px;
+	top: 80px;
+	display: inline-block;
+	padding-left: 10px;
+	padding-right: 10px;
+  }
